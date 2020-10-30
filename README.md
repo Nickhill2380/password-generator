@@ -7,7 +7,9 @@ I was tasked with created a password generator that will allow the user to selec
     Going forward to improve on the functionality of this website. I'm going to look into a way to ensure the for loop selects one of each of the criteria selected. In case the user needs to use them and not just wants to. This would be used to cut out rare case where do to random propability, certain are selected by user but not by the function, causing the user to have to redo go through the prompts to get a password they can use.
 
 ## Usage
+Below is a screenshot from, https://nickhill2380.github.io/password-generator/
 
+![image](https://user-images.githubusercontent.com/71850826/97720615-d96ebc00-1a9e-11eb-807c-8a11c4b11e23.png)
 
 ## Credits
 
