@@ -4,14 +4,16 @@
 
 //prompt user for length of password between 8 and 128 characters
 var passwordLength = function() {
-
+  
   var characterLength = window.prompt("How long does you password need to be?");
+  
 
   characterLength = parseInt(characterLength);
 
 if (characterLength >= 8 && characterLength <= 128) {
   console.log(characterLength);
    
+  charLength = characterLength;
   
    
 } else {
@@ -19,7 +21,7 @@ if (characterLength >= 8 && characterLength <= 128) {
   passwordLength();
   
 };
-return characterLength;
+return charLength;
 };
 
 //prompt character types to include lowercase, uppercase, numeric, and/or special characters
@@ -68,13 +70,13 @@ var generatePassword = function() {
   
   password = "";
 
-  for ( var i = 0; i < characterLength; i++ ){
+  for ( var i = 0; i < charLength; i++ ){
     
     password += criteriaSet.charAt(Math.floor(Math.random() * criteriaSet.length));
 
     console.log(password);
   }
-  window.alert("Your password is " + password +" ");
+  
   return password;
 }
 
