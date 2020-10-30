@@ -20,4 +20,3 @@ https://stackoverflow.com/questions/1497481/javascript-password-generator
 I used this to help get my copy button to work:
 
 https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
-
