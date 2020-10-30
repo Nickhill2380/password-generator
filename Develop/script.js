@@ -10,43 +10,73 @@ var passwordLength = function() {
   characterLength = parseInt(characterLength);
 
 if (characterLength >= 8 && characterLength <= 128) {
-   return characterLength;
+  console.log(characterLength);
+   
+  
+   
 } else {
   window.alert("Please select a correct value.");
   passwordLength();
   
 };
+return characterLength;
 };
 
 //prompt character types to include lowercase, uppercase, numeric, and/or special characters
 var criteria = function() {
+    criteriaSet= "";
+
 var lowercase = window.confirm("Does your password need to include lowercase letters?");
+    
+    if(lowercase){
+      criteriaSet = criteriaSet + "abcdefghijklmnopqrstuvwxyz";
+      console.log(criteriaSet);
+    };
 
-    if (lowercase){
-      return lowercase;
-    }
 var uppercase = window.confirm("Does your password need to include uppercase letters?");
-    if (uppercase){
-      return uppercase;
-    }
 
+    if (uppercase) {
+      criteriaSet = criteriaSet +"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      console.log(criteriaSet);
+    };
+  
 var numeric = window.confirm("Does your password need to include numbers?");
+   
     if (numeric) {
-      return numeric;
-    }
+      criteriaSet = criteriaSet + "0123456789";
+      console.log(criteriaSet);
+};
 
 var special = window.confirm("Does your password need to include special characters?");
-    if(special) {
-      return special;
+
+    if (special) {
+      criteriaSet = criteriaSet + "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
+      console.log(criteriaSet);
     }
+   
 
     if (!special && !numeric && !uppercase && !lowercase) {
       window.alert("You must select some criteria to use.");
       criteria();
     };
+    return criteriaSet;
   };
 //rerun if user does not select anything
 
+//function that puts password all together
+var generatePassword = function() {
+  
+  password = "";
+
+  for ( var i = 0; i < characterLength; i++ ){
+    
+    password += criteriaSet.charAt(Math.floor(Math.random() * criteriaSet.length));
+
+    console.log(password);
+  }
+  window.alert("Your password is " + password +" ");
+  return password;
+}
 
 
 
